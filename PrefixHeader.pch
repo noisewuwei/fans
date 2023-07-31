@@ -1,0 +1,76 @@
+//
+//  PrefixHeader.pch
+//  Fans
+//
+//  Created by 吴畏 on 2018/6/20.
+//  Copyright © 2018年 吴畏. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "MKNetworkKit.h"
+#import "MBProgressHUD.h"
+
+
+#import "UIButton+WebCache.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "BaseViewController.h"
+
+#import "Define.h"
+#import "ZJStaticFunction.h"
+#import "ZJStoreDefaults.h"
+#import "ZJAlertView.h"
+#import "UIColor+HexString.h"
+#import "HTTPRequest.h"
+#import "Masonry.h"
+
+#import "WKWAsset.h"
+
+#define screenScale [UIScreen mainScreen].scale
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
+#define kSizeThumbnailCollectionView  ([UIScreen mainScreen].bounds.size.width-10)/4
+
+#define imgNormal @"photo_check_default"
+#define imgSelect @"photo_check_selected"
+
+
+
+
+#define RGB16(rgbValue)\
+\
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
+
+#define RGB16(rgbValue)\
+\
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
+#define kGrayColor  RGBCOLOR(196, 197, 198)
+#define kGreenColor RGBCOLOR(0, 201, 144)
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define KEYWINDOW [UIApplication sharedApplication].keyWindow
+
+#define DDLog(FORMAT, ...)   fprintf(stderr, "\n[%s]  function:%s line:%d content:%s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#define WeakSelf  __weak __typeof(&*self)weakSelf = self;
+
+
+
+#endif /* PrefixHeader_pch */

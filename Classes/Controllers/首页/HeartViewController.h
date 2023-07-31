@@ -1,0 +1,13 @@
+//
+//  HeartViewController.h
+//  Fans
+//
+//  Created by 吴畏 on 2018/7/9.
+//  Copyright © 2018年 吴畏. All rights reserved.
+//
+
+#import "BaseViewController.h"
+
+@interface HeartViewController : BaseViewController
+
+@end
